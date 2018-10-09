@@ -32,23 +32,23 @@ public class ProgressBar2 {
         progressBar.setStringPainted(true);
         progressBar.setMaximum(100);
         
-       Thread t=new Thread(){
-            @Override
-            public void run() {
-                int i=0;
-                while (true){
-                    progressBar.setValue(i);
-                    i=(i+1)%100;
-                    try {
-                        Thread.sleep(100);
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(ProgressBar2.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
-            }    
-       };
-       t.setDaemon(true);
-       t.start();
+        Thread t=new Thread(){
+             @Override
+             public void run() {
+                 int i=0;
+                 while (true){
+                     progressBar.setValue(i);
+                     i=(i+1)%100;
+                     try {
+                         Thread.sleep(100);
+                     } catch (InterruptedException ex) {
+                         Logger.getLogger(ProgressBar2.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                 }
+             }    
+        };
+        t.setDaemon(true);
+        t.start();
         
         frame.add(progressBar);
         frame.setVisible(true);
