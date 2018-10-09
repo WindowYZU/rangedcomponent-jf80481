@@ -36,7 +36,7 @@ public class JScrollPane1 {
         JScrollPane scrollPane=new JScrollPane();
         scrollPane.getViewport().add(textArea);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         //試試看將 textArea 或 scrollPane 加入 frame 的區別
         frame.add(scrollPane);
         ///////////////////////////////////////////////
